@@ -1,0 +1,14 @@
+{
+  "model_type": "per_message_logistic_regression",
+  "objective": "predict_individual_message_sentiment",
+  "accuracy": 0.7380410022779044,
+  "total_messages": 2191,
+  "training_messages": 1752,
+  "test_messages": 439,
+  "feature_count": 32,
+  "sentiment_distribution": {
+    "Neutral": 1636,
+    "Positive": 437,
+    "Negative": 118
+  }
+}

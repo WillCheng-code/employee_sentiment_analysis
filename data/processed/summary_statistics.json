@@ -1,0 +1,88 @@
+{
+  "dataset_info": {
+    "total_messages": 2191,
+    "total_employees": 10,
+    "analysis_period_days": 729,
+    "date_range": "2010-01-01 to 2011-12-31"
+  },
+  "sentiment_distribution": {
+    "Neutral": 1672,
+    "Positive": 404,
+    "Negative": 115
+  },
+  "sentiment_percentages": {
+    "Neutral": 0.7631218621633957,
+    "Positive": 0.18439068918302146,
+    "Negative": 0.05248744865358284
+  },
+  "top_performers": {
+    "bobette.riner@ipgdirect.com": {
+      "avg_sentiment": 0.1889,
+      "positive_pct": 0.23963133640552994,
+      "message_count": 217
+    },
+    "eric.bass@enron.com": {
+      "avg_sentiment": 0.1857,
+      "positive_pct": 0.21428571428571427,
+      "message_count": 210
+    },
+    "johnny.palmer@enron.com": {
+      "avg_sentiment": 0.1831,
+      "positive_pct": 0.2347417840375587,
+      "message_count": 213
+    }
+  },
+  "employees_needing_support": {
+    "kayne.coulter@enron.com": {
+      "avg_sentiment": 0.0805,
+      "negative_pct": 0.05747126436781609,
+      "message_count": 174
+    },
+    "patti.thompson@enron.com": {
+      "avg_sentiment": 0.08,
+      "negative_pct": 0.06222222222222222,
+      "message_count": 225
+    },
+    "john.arnold@enron.com": {
+      "avg_sentiment": 0.0625,
+      "negative_pct": 0.07421875,
+      "message_count": 256
+    }
+  },
+  "flight_risk_summary": {
+    "high_risk_count": 2,
+    "risk_rate": 0.2,
+    "risk_factors": {
+      "risk_low_sentiment": 0,
+      "risk_high_negative": 0,
+      "risk_low_activity": 3,
+      "risk_declining_trend": 5
+    }
+  },
+  "model_performance": {
+    "accuracy": 0.7425968109339408,
+    "feature_count": 10,
+    "top_features": [
+      {
+        "feature": "text_length",
+        "importance": 0.31099100423218434
+      },
+      {
+        "feature": "word_count",
+        "importance": 0.26892286139838834
+      },
+      {
+        "feature": "month",
+        "importance": 0.16367933834798
+      },
+      {
+        "feature": "day_of_week",
+        "importance": 0.12953238384393476
+      },
+      {
+        "feature": "emp_avg_sentiment",
+        "importance": 0.027075263574503898
+      }
+    ]
+  }
+}

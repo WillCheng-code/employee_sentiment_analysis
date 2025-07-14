@@ -1,0 +1,75 @@
+# .cursorrules.yaml
+
+name: Employee Sentiment Analysis Rules
+
+description: Cursor rules for managing project files, ensuring structure, naming conventions, and enforcing project-specific standards for Employee Sentiment Analysis.
+
+fileRules:
+  - pattern: ".*\\.ipynb"
+    required: true
+    description: "Main Jupyter notebook file that contains the complete end-to-end process with detailed comments and section titles."
+
+  - pattern: "README\\.md"
+    required: true
+    description: "Project summary file highlighting top employees, flight risks, key insights, and methodology overview."
+
+  - pattern: ".*\\.py"
+    required: false
+    description: "Supporting Python scripts if used for modularization of the code."
+
+  - pattern: ".*\\.csv"
+    required: true
+    description: "Dataset file required for sentiment analysis. Must include the provided test.csv."
+
+  - pattern: ".*\\.docx"
+    required: true
+    description: "Final report file summarizing approach, key findings, visualizations, and predictive modeling outcomes."
+
+  - pattern: "visualizations/.*\\.(png|jpg|jpeg)"
+    required: true
+    description: "Folder containing all charts and visualizations used for EDA, ranking, and model evaluations."
+
+structureRules:
+  - name: Visualizations Folder
+    pattern: "visualizations/"
+    required: true
+    description: "Folder for storing all generated visualizations."
+
+  - name: Main Notebook Structure
+    pattern: ".*\\.ipynb"
+    required: true
+    mustContain:
+      - "Sentiment Labeling"
+      - "Exploratory Data Analysis"
+      - "Employee Score Calculation"
+      - "Employee Ranking"
+      - "Flight Risk Identification"
+      - "Predictive Modeling"
+    description: "The notebook should contain clearly titled sections matching the six key tasks."
+
+conventionRules:
+  - pattern: ".*"
+    mustNotContain:
+      - "test2.csv"
+      - "data_backup.csv"
+    description: "Avoid using extra datasets or irrelevant files that are not part of the provided dataset."
+
+  - pattern: ".*"
+    mustContainComment: true
+    description: "All Python and Jupyter files must contain sufficient in-line comments explaining each step."
+
+  - pattern: ".*\\.ipynb"
+    mustContainTitle: true
+    description: "Each notebook section must have markdown titles for clarity."
+
+submissionRules:
+  - email: "jbirch@glynac.ai"
+    subject: "AI-project-submission"
+    attachment: "*.zip"
+    description: "Zip file must contain all deliverables as per the project guidelines and must be emailed with the correct subject."
+
+notes:
+  - "Ensure that each step in the notebook is clearly explained with markdown cells."
+  - "Each deliverable must comply with the specified structure to facilitate evaluation."
+  - "The README file should succinctly summarize the project findings and methodology."
+
